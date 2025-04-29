@@ -1,0 +1,14 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-4">
+  <h2>All Games</h2>
+  <div class="list-group">
+    <% games.forEach(game => { %>
+      <a href="/games/<%= game._id %>" class="list-group-item list-group-item-action">
+        <strong><%= game.gameName %></strong> - <%= game.platform %>
+      </a>
+    <% }) %>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>

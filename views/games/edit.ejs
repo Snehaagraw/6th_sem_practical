@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-4">
+  <h2>Edit Game: <%= game.gameName %></h2>
+  <form action="/games/<%= game._id %>?_method=PUT" method="POST" class="needs-validation" novalidate>
+    <div class="mb-3">
+      <label class="form-label">Game Name (cannot change)</label>
+      <input type="text" class="form-control" value="<%= game.gameName %>" readonly>
+    </div>
+    <div class="mb-3">
+      <label for="numberOfPlayer" class="form-label">Number of Players</label>
+      <input type="number" name="numberOfPlayer" class="form-control" value="<%= game.numberOfPlayer %>" required>
+    </div>
+    <div class="mb-3">
+      <label for="gameDuration" class="form-label">Game Duration</label>
+      <input type="text" name="gameDuration" class="form-control" value="<%= game.gameDuration %>" required>
+    </div>
+    <div class="mb-3">
+      <label for="platform" class="form-label">Platform</label>
+      <input type="text" name="platform" class="form-control" value="<%= game.platform %>" required>
+    </div>
+    <button type="submit" class="btn btn-success">Update Game</button>
+  </form>
+</div>
+
+<%- include('../partials/footer') %>

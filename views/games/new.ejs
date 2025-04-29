@@ -1,0 +1,26 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-4">
+  <h2>Add New Game</h2>
+  <form action="/games" method="POST" class="needs-validation" novalidate>
+    <div class="mb-3">
+      <label for="gameName" class="form-label">Game Name</label>
+      <input type="text" name="gameName" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="numberOfPlayer" class="form-label">Number of Players</label>
+      <input type="number" name="numberOfPlayer" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="gameDuration" class="form-label">Game Duration</label>
+      <input type="text" name="gameDuration" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <label for="platform" class="form-label">Platform</label>
+      <input type="text" name="platform" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Create Game</button>
+  </form>
+</div>
+
+<%- include('../partials/footer') %>
